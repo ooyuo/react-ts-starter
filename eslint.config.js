@@ -1,3 +1,4 @@
+import fsd from 'eslint-plugin-fsd';
 import importPlugin from 'eslint-plugin-import';
 import prettier from 'eslint-plugin-prettier';
 import react from 'eslint-plugin-react';
@@ -34,6 +35,7 @@ export default typescript.config(
       "@emotion": emotion,
       import: importPlugin,
       prettier: prettier,
+      fsd
     },
     settings: {
       "import/resolver": { typescript: {} },
@@ -124,14 +126,19 @@ export default typescript.config(
           "alphabetize": { "order": "asc" }
         }
       ],
-      
+
       // 더 엄격한 TypeScript 규칙
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/explicit-member-accessibility": ["error", { "overrides": { "constructors": "no-public" } }],
-      
+
       // React 최신 규칙
       "react/jsx-no-useless-fragment": "warn",
       "react/jsx-curly-brace-presence": ["error", { "props": "never", "children": "never" }],
+
+      // FSD 아키텍처 규칙
+      'fsd/hoist-handler-hooks': 'error',
+      'fsd/no-layer-tight-coupling': 'error',
+      'fsd/public-api': 'error'
     },
   },
   ...typescript.configs.recommended
