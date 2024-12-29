@@ -1,0 +1,10 @@
+# global reviewers
+* @ooyuo
+
+# frontend files
+*.js @ooyuo
+*.jsx @ooyuo
+*.ts @ooyuo
+*.tsx @ooyuo
+/src/components/ @ooyuo
+/src/pages/ @ooyuo
