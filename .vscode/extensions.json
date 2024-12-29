@@ -1,0 +1,27 @@
+{
+  "recommendations": [
+    // ESLint - 코드 품질 및 스타일 검사
+    "dbaeumer.vscode-eslint",
+    
+    // Prettier - 코드 포맷팅
+    "esbenp.prettier-vscode",
+    
+    // TypeScript 관련
+    "ms-vscode.vscode-typescript-next",
+    
+    // React 개발 도구
+    "dsznajder.es7-react-js-snippets",
+    
+    // Emotion CSS-in-JS 지원
+    "styled-components.vscode-styled-components",
+    
+    // Import 정렬 및 관리
+    "mike-co.import-sorter",
+    
+    // Git 관련
+    "eamodio.gitlens",
+    
+    // 파일 아이콘
+    "pkief.material-icon-theme"
+  ]
+} 
