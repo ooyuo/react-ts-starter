@@ -20,7 +20,24 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+
+    /* Path Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"],
+      "@images/*": ["src/assets/images/*"]
+    },
+
+    /* Additional DX Improvements */
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "incremental": true,
+
+    /* SVG 타입 지원 */
+    "types": ["vite/client"]
   },
-  "include": ["src"]
+  "include": ["src", "**/*.ts", "**/*.tsx", "**/*.svg"]
 }
