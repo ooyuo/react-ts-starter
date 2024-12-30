@@ -1,12 +1,6 @@
 import { apiClient } from '@/shared/api';
 
-import type {
-  CreatePostDTO,
-  GetPostResponse,
-  GetPostsParams,
-  GetPostsResponse,
-  UpdatePostDTO,
-} from '../model/types';
+import type { CreatePostDTO, GetPostResponse, GetPostsParams, GetPostsResponse, UpdatePostDTO } from '../model/types';
 
 const BASE_URL = 'https://jsonplaceholder.typicode.com/posts';
 

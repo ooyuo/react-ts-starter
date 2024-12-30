@@ -4,11 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { postApi } from '../api/post.api';
 import { POST_KEYS } from './constants';
-import {
-  CreatePostDTO,
-  GetPostResponse,
-  UpdatePostDTO,
-} from './types';
+import { CreatePostDTO, GetPostResponse, UpdatePostDTO } from './types';
 
 // Queries
 // export const usePostsQuery = () => {
@@ -47,19 +43,13 @@ export const useCreatePost = () => {
 export const useUpdatePost = (id: number) => {
   return createMutation<GetPostResponse, UpdatePostDTO>({
     mutationFn: postApi.update,
-    invalidateQueries: [
-      POST_KEYS.lists(),
-      POST_KEYS.detail(id),
-    ],
+    invalidateQueries: [POST_KEYS.lists(), POST_KEYS.detail(id)],
   });
 };
 
 export const useDeletePost = (id: number) => {
   return createMutation<void, number>({
     mutationFn: postApi.delete,
-    invalidateQueries: [
-      POST_KEYS.lists(),
-      POST_KEYS.detail(id),
-    ],
+    invalidateQueries: [POST_KEYS.lists(), POST_KEYS.detail(id)],
   });
 };

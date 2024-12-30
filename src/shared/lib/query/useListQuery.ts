@@ -1,14 +1,6 @@
-import {
-  useEffect,
-  useMemo,
-  useRef,
-} from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 
-import {
-  QueryKey,
-  useQuery,
-  UseQueryOptions,
-} from '@tanstack/react-query';
+import { QueryKey, useQuery, UseQueryOptions } from '@tanstack/react-query';
 
 import { useDebounce } from '../hooks/useDebounce';
 
@@ -25,10 +17,7 @@ interface UseListQueryConfig<TData, TError = unknown> {
   debounced?: boolean;
   debounceTime?: number;
   select?: (data: TData) => TData;
-  options?: Omit<
-    UseQueryOptions<TData, TError, TData>,
-    'queryKey' | 'queryFn' | 'select'
-  >;
+  options?: Omit<UseQueryOptions<TData, TError, TData>, 'queryKey' | 'queryFn' | 'select'>;
 }
 
 export const useListQuery = <TData, TError = unknown>({
@@ -40,9 +29,7 @@ export const useListQuery = <TData, TError = unknown>({
   select,
   options = {},
 }: UseListQueryConfig<TData, TError>) => {
-  const debouncedFetchRef = useRef(
-    debounced ? useDebounce(fetchFn, debounceTime) : fetchFn
-  );
+  const debouncedFetchRef = useRef(debounced ? useDebounce(fetchFn, debounceTime) : fetchFn);
 
   const queryString = useMemo(() => {
     const queryParams = new URLSearchParams();

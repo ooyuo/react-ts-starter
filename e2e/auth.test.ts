@@ -1,7 +1,4 @@
-import {
-  expect,
-  test,
-} from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('인증 테스트', () => {
   test('로그인 프로세스', async ({ page }) => {

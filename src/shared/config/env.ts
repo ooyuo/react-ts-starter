@@ -3,4 +3,4 @@ export const env = {
   isDev: import.meta.env.VITE_ENV === 'development',
   isProd: import.meta.env.VITE_ENV === 'production',
   appTitle: import.meta.env.VITE_APP_TITLE,
-} as const
+} as const;

@@ -1,7 +1,4 @@
-import {
-  useMutation,
-  useQueryClient,
-} from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 interface MutationConfig<TData, TVariables> {
   mutationFn: (variables: TVariables) => Promise<TData>;
@@ -9,9 +6,7 @@ interface MutationConfig<TData, TVariables> {
   invalidateQueries?: readonly (string | number | readonly (string | number)[])[];
 }
 
-export const createMutation = <TData, TVariables>(
-  config: MutationConfig<TData, TVariables>
-) => {
+export const createMutation = <TData, TVariables>(config: MutationConfig<TData, TVariables>) => {
   const queryClient = useQueryClient();
 
   return useMutation<TData, Error, TVariables>({

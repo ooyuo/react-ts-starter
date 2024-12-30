@@ -7,8 +7,8 @@ interface QueryStore {
   prefetchQuery: <T>(queryKey: string[], fn: () => Promise<T>) => Promise<void>;
 }
 
-export const useQueryStore = create<QueryStore>((set) => ({
-  invalidateQueries: async (queryKey) => {
+export const useQueryStore = create<QueryStore>(set => ({
+  invalidateQueries: async queryKey => {
     await queryClient.invalidateQueries({ queryKey });
   },
   prefetchQuery: async (queryKey, fn) => {

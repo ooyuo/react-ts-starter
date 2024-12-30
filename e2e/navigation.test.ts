@@ -1,7 +1,4 @@
-import {
-  expect,
-  test,
-} from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('네비게이션 테스트', () => {
   test('메인 페이지 방문', async ({ page }) => {

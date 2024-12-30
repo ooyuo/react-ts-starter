@@ -1,7 +1,4 @@
-import {
-  expect,
-  test,
-} from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('API 테스트', () => {
   test('데이터 로딩 확인', async ({ page }) => {

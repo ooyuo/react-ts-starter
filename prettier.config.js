@@ -1,16 +1,16 @@
 module.exports = {
-  arrowParens: "avoid",
+  arrowParens: 'avoid',
   bracketSameLine: false,
   bracketSpacing: true,
-  endOfLine: "lf",
+  endOfLine: 'lf',
   jsxSingleQuote: false,
   printWidth: 120,
-  proseWrap: "preserve",
-  quoteProps: "as-needed",
+  proseWrap: 'preserve',
+  quoteProps: 'as-needed',
   semi: true,
   singleQuote: true,
   tabWidth: 2,
-  trailingComma: "es5",
+  trailingComma: 'es5',
   importOrder: ['^@core/(.*)$', '^@server/(.*)$', '^@ui/(.*)$', '^[./]'],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
@@ -18,14 +18,14 @@ module.exports = {
     {
       files: '*.{json,yaml,yml}',
       options: {
-        tabWidth: 2
-      }
+        tabWidth: 2,
+      },
     },
     {
       files: '*.md',
       options: {
-        proseWrap: 'always'
-      }
-    }
-  ]
+        proseWrap: 'always',
+      },
+    },
+  ],
 };

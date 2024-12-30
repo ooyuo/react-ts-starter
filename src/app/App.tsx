@@ -9,9 +9,7 @@ import { QueryClientProvider } from './providers/query/QueryClientProvider';
 export function App({ children }: PropsWithChildren) {
   return (
     <ErrorBoundary fallback={<div>Something went wrong</div>}>
-      <QueryClientProvider queryClient={queryClient}>
-        {children}
-      </QueryClientProvider>
+      <QueryClientProvider queryClient={queryClient}>{children}</QueryClientProvider>
     </ErrorBoundary>
   );
 }
