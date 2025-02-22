@@ -1,0 +1,73 @@
+name: 🐛 버그 리포트
+description: 버그를 리포트하기 위한 템플릿입니다.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: 버그 리포트
+      description: 버그를 상세히 설명해주세요.
+      value: |
+        # 버그 리포트
+
+        ## 버그 설명
+        어떤 버그가 발생했는지 설명해주세요.
+
+        ## 재현 방법
+        1. 
+        2. 
+        3. 
+
+        ## 예상된 동작
+        원래 어떻게 동작해야 하는지 설명해주세요.
+
+        ## 환경 정보
+        - OS: 
+        - 브라우저: 
+        - 버전:
+
+        ## 추가 정보
+        스크린샷이나 로그 등 추가 정보가 있다면 첨부해주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: 재현 방법
+      description: 버그를 재현하기 위한 단계를 설명해주세요.
+      value: |
+        1. 
+        2. 
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 예상된 동작
+      description: 원래 어떻게 동작해야 하는지 설명해주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 환경 정보
+      description: 사용 중인 환경 정보를 알려주세요 (운영체제, 브라우저 등)
+      value: |
+        - OS: 
+        - 브라우저: 
+        - 버전:
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 추가 정보
+      description: 스크린샷이나 로그 등 추가 정보가 있다면 첨부해주세요.
+    validations:
+      required: false

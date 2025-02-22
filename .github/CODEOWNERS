@@ -8,3 +8,11 @@
 *.tsx @ooyuo
 /src/components/ @ooyuo
 /src/pages/ @ooyuo
+/src/test/ @ooyuo
+/src/types/ @ooyuo
+/src/utils/ @ooyuo
+/src/hooks/ @ooyuo
+/src/lib/ @ooyuo
+/src/styles/ @ooyuo
+/src/test/ @ooyuo
+/src/test/setup.ts @ooyuo
